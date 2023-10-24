@@ -23,4 +23,10 @@ contract CounterTest is Test {
     function testDemo() public view {
         console.logAddress(address(_uniswapV2));
     }
+
+    function test_weth_supply() public {
+        vm.deal(address(_weth), 100000000);
+        uint t = _weth.totalSupply();
+        console.logUint(t);
+    }
 }
