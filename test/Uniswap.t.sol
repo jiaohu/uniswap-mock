@@ -25,7 +25,8 @@ contract CounterTest is Test {
     }
 
     function test_weth_supply() public {
-        vm.deal(address(_weth), 100000000);
+        // vm.deal(address(_weth), 100000000);
+        address(_weth).call{value: 20000}("");
         uint t = _weth.totalSupply();
         console.logUint(t);
     }
