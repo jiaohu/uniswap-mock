@@ -20,7 +20,7 @@ contract CounterTest is Test {
         _uniswapV2 = new UniswapV2Router02(address(_uniswapFactory), address(_weth));
     }
 
-    function testDemo() public {
+    function testDemo() public view {
         console.logAddress(address(_uniswapV2));
     }
 }
