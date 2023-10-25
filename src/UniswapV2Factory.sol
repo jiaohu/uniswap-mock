@@ -26,6 +26,11 @@ contract UniswapV2Factory is IUniswapV2Factory {
         return allPairs.length;
     }
 
+    function getPairCodeHash() public view returns(bytes32){
+        bytes memory bytecode = type(UniswapV2Pair).creationCode;
+        return keccak256(bytecode);
+    }
+
     function createPair(address tokenA, address tokenB) external returns (address pair) {
         require(tokenA != tokenB, 'UniswapV2: IDENTICAL_ADDRESSES');
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);

@@ -16,6 +16,7 @@ contract CounterTest is Test {
 
     function setUp() public {
         _uniswapFactory = new UniswapV2Factory(_feeToSetter);
+        console.logBytes32(_uniswapFactory.getPairCodeHash());
         _weth = new WETH9();
         _uniswapV2 = new UniswapV2Router02(address(_uniswapFactory), address(_weth));
     }
