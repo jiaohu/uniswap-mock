@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-import "openzeppelin-contracts-upgradeable/contracts/utils/math/SafeMathUpgradeable.sol";
+import "@openzeppelin-contracts-upgradeable/contracts/utils/math/SafeMathUpgradeable.sol";
 import '../interfaces/IUniswapV2Pair.sol';
 
 library UniswapV2Library {
@@ -21,7 +21,7 @@ library UniswapV2Library {
                 hex'ff',
                 factory,
                 keccak256(abi.encodePacked(token0, token1)),
-                hex'268a23e34442e82e17574f13203f213ce91dd638b0ab8d2cc6dfd931fef7a112' // init code hash
+                hex'158e4b899e067ae4c92f099e7c1d46bb8dacdef454925ac3bdec8b377f110f83' // init code hash
             )))));
     }
 

@@ -7,7 +7,7 @@ import "../src/WETH9.sol";
 import {UniswapV2Router02} from "../src/UniswapV2Router02.sol";
 import { UniswapV2Factory } from "../src/UniswapV2Factory.sol";
 import { UniswapV2Pair } from "../src/UniswapV2Pair.sol";
-import "openzeppelin-contracts-upgradeable/contracts/utils/math/MathUpgradeable.sol";
+import "@openzeppelin-contracts-upgradeable/contracts/utils/math/MathUpgradeable.sol";
 
 contract UniswapV2Test is Test {
     WETH9 public weth;
